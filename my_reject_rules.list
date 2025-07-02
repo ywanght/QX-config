@@ -1,0 +1,86 @@
+# My Custom Reject List
+host-suffix,getui.com, reject
+host-suffix,umeng.com, reject
+host-suffix,gvt3.com, reject
+host, adashbc.ut.taobao.com, reject
+host, pcmactivity.chinacloudsites.cn, reject
+host, apmgw.hellobike.com, reject
+host, adashxgc.ut.taobao.com, reject
+host, ynuf.aliapp.org, reject
+host, mazu.m.qq.com, reject
+host, rapi.hellobike.com, reject
+host, api-access.pangolin-sdk-toutiao1.com, reject
+host-suffix,jpush.cn, reject
+host, moment-cdn.hellobike.com, reject
+host, image-cdn.hellobike.com, reject
+host, sf3-fe-tos.pglstatp-toutiao.com, reject
+host, api-access.pangolin-sdk-toutiao.com, reject
+host, fingerprint-upload.hellobike.com, reject
+host-suffix,miaozhen.com, reject
+host, hitchregistergw.hellobike.com, reject
+host-suffix,ronghub.com, reject
+host, toblog.ctobsnssdk.com, reject
+host, sdk.e.qq.com, reject
+host, p3-be-pack-sign.pglstatp-toutiao.com, reject
+host, marketingapi.hellobike.com, reject
+host, cddp-track.aligames.com, reject
+host, log-api.pangolin-sdk-toutiao-b.com, reject
+host, mon.zijieapi.com, reject
+domain, *youzanyun.com, reject
+host-suffix,uc.cn, reject
+host-suffix,umengcloud.com, reject
+host-suffix,ucweb.com, reject
+host-suffix,getui.net, reject
+host, lx0.meituan.com, reject
+host-suffix,tec73.com, reject
+host, sofire.baidu.com, reject
+host-suffix,puata.info, reject
+host-suffix,gepush.com, reject
+host, ad.12306.cn, reject
+host, catdot.dianping.com, reject
+host-suffix,neixin.cn, reject
+host, mktm.jd.com, reject
+host-suffix,ctobsnssdk.com, reject
+host-suffix,pangolin-sdk-toutiao.com, reject
+host-suffix,pangolin-sdk-toutiao1.com, reject
+host-suffix,admobile.top, reject
+host-suffix,tianmu.mobi, reject
+host-suffix,beizi.biz, reject 
+host-suffix,hubcloud.com.cn, reject
+host-suffix,pangolin-sdk-toutiao-b.com, reject
+host-suffix,9zas5.com, reject
+host-suffix,vipliangmei.com, reject
+host-suffix,ranfenghd.com, reject
+host-suffix,wanchuweilai.com, reject
+host, im-x.jd.com, reject
+host, 203.209.247.65, reject
+host, appdownload.alicdn.com, reject
+host, p26-be-pack-sign.pglstatp-toutiao.com, reject
+host, 106.11.43.138, reject
+host, h-adashx.ut.taobao.com, reject
+host, yixiu-abtest.alicdn.com, reject
+host, 59.82.113.252, reject
+host, gm.mmstat.com, reject
+host, 49.79.227.133, reject
+host, px.ucweb.com, reject
+host, cnlogs.umeng.com, reject
+host, ucc.umeng.com, reject
+host, emdcadvertisepj.eastmoney.com, reject
+host, gbfek.dfcfw.com, reject
+host, appadvise.eastmoney.com, reject
+host, bdstatics.eastmoney.com, reject
+host, bd-fireworks.eastmoney.com, reject
+host, utoken.umeng.com, reject
+host, marketing.dfcfs.com, reject
+host, emcharts.dfcfw.com, reject
+host, marketing.dfcfw.com, reject
+host, yumao.puata.info, reject
+host, huaxiang.eastmoney.com, reject
+host, mkapi2.dfcfs.com, reject
+host, emdcadvertise.eastmoney.com, reject
+host, tradenoticemix.18.cn, reject
+host, emdcdataconfig.eastmoney.com, reject
+host, emdcmessagemix.18.cn, reject
+host, tradegatewaytxbgpmix.18.cn, reject
+host, emdctradezp.dfcfs.cn, reject
+host-suffix, msftconnecttest.com, reject
