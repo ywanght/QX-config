@@ -1,4 +1,4 @@
-#url正则规则匹配
+# url正则规则匹配
 ^https?:\/\/helper\.2bulu\.com\/adActivity url reject-200
 # My Custom Reject List
 host-suffix,getui.com, reject
