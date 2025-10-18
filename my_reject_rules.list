@@ -84,3 +84,5 @@ host, emdcmessagemix.18.cn, reject
 host, tradegatewaytxbgpmix.18.cn, reject
 host, emdctradezp.dfcfs.cn, reject
 host-suffix, msftconnecttest.com, reject
+url-regex, ^https?:\/\/ossgw\.alicdn\.com\/creatives-assets\/, reject
+
