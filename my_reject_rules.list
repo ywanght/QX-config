@@ -84,5 +84,9 @@ host, emdcmessagemix.18.cn, reject
 host, tradegatewaytxbgpmix.18.cn, reject
 host, emdctradezp.dfcfs.cn, reject
 host-suffix, msftconnecttest.com, reject
-url-regex, ^https?:\/\/ossgw\.alicdn\.com\/creatives-assets\/, reject
-
+host-suffix, sugar.zhihu.com, reject
+host-suffix, zevent.zhihu.com, reject
+host-suffix, zplus.zhihu.com, reject
+host-suffix, app-log.zhihu.com, reject
+host-keyword, alicdn, reject
+host-keyword, 360buyimg, reject
