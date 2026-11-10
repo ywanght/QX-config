@@ -120,6 +120,31 @@ host, 49.79.227.133, reject
 # ----- 微软连接测试（防止 Windows 弹窗） -----
 host-suffix, msftconnecttest.com, reject
 
+# ----- 两步路 (2bulu) -----
+# —— TopOn (Taku) 聚合本体 ——
+host-suffix, anythinktech.com, reject
+host-suffix, toponad.com, reject
+# —— 聚合下的广告联盟 ——
+host-suffix, funlinkads.com, reject
+host-suffix, medproad.com, reject
+host-suffix, 52qumao.com, reject
+host-suffix, 1rtb.net, reject
+host-suffix, roiplusad.com, reject
+host-suffix, adkwai.com, reject
+# —— 广告素材 CDN ——
+host, bridgeads.massx.com, reject
+host, creative.mergex.cn, reject
+host, t.microengine.cn, reject
+# —— 自家广告接口 ——
+url-regex, ^https?://[a-z0-9.-]*2bulu\.com/getSplash(\?|$), reject-200
+url-regex, ^https?://[a-z0-9.-]*2bulu\.com/saveSplashFrequencyStatistics(\?|$), reject-200
+url-regex, ^https?://[a-z0-9.-]*2bulu\.com/advert/getAllAdInfo(\?|$), reject-200
+url-regex, ^https?://[a-z0-9.-]*2bulu\.com/advert/getAdInfo(\?|$), reject-200
+url-regex, ^https?://[a-z0-9.-]*2bulu\.com/v9/advert/getUniversalAd(\?|$), reject-200
+url-regex, ^https?://[a-z0-9.-]*2bulu\.com/getFreeAdDuration(\?|$), reject-200
+url-regex, ^https?://[a-z0-9.-]*2bulu\.com/getPopInfo(\?|$), reject-200
+url-regex, ^https?://m\.baidu\.com/baidu\.php, reject
+
 # ----- 其他 -----
 host, appdownload.alicdn.com, reject
 host, cddp-track.aligames.com, reject
