@@ -135,15 +135,6 @@ host-suffix, adkwai.com, reject
 host, bridgeads.massx.com, reject
 host, creative.mergex.cn, reject
 host, t.microengine.cn, reject
-# —— 自家广告接口 ——
-url-regex, ^https?://[a-z0-9.-]*2bulu\.com/getSplash(\?|$), reject-200
-url-regex, ^https?://[a-z0-9.-]*2bulu\.com/saveSplashFrequencyStatistics(\?|$), reject-200
-url-regex, ^https?://[a-z0-9.-]*2bulu\.com/advert/getAllAdInfo(\?|$), reject-200
-url-regex, ^https?://[a-z0-9.-]*2bulu\.com/advert/getAdInfo(\?|$), reject-200
-url-regex, ^https?://[a-z0-9.-]*2bulu\.com/v9/advert/getUniversalAd(\?|$), reject-200
-url-regex, ^https?://[a-z0-9.-]*2bulu\.com/getFreeAdDuration(\?|$), reject-200
-url-regex, ^https?://[a-z0-9.-]*2bulu\.com/getPopInfo(\?|$), reject-200
-url-regex, ^https?://m\.baidu\.com/baidu\.php, reject
 
 # ----- 其他 -----
 host, appdownload.alicdn.com, reject
