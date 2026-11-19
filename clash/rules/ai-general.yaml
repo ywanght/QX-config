@@ -76,7 +76,6 @@ payload:
   - 'DOMAIN-SUFFIX,civitai.com'
   - 'DOMAIN-SUFFIX,dify.ai'
   - 'DOMAIN-SUFFIX,coze.com'
-  - 'DOMAIN-SUFFIX,meta.ai'
   - 'DOMAIN-SUFFIX,copilot.microsoft.com'
   - 'DOMAIN-SUFFIX,bing.com'
   - 'DOMAIN-SUFFIX,sydney.bing.com'

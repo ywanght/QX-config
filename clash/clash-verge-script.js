@@ -34,6 +34,8 @@ const REGION_DEFS = [
 const NON_HK_EXCLUDE_REGEX = /🇭🇰|🇲🇴|🇨🇳|香港|澳门|中国|回国|HK|MO|CN|Hong\s?Kong|Macau/i;
 // 优先匹配机场专门标注的 GPT/AI 优化节点（排除欧洲节点，避免 Gemini/Grok 触发欧盟 GDPR 限制）
 const EU_REGEX = /🇬🇧|🇩🇪|🇫🇷|🇳🇱|🇸🇪|🇨🇭|英国|德国|法国|荷兰|瑞典|瑞士|欧洲|UK|GB|DE|FR|NL|SE|EU/i;
+// 优先匹配家宽 / 住宅 IP 节点（Claude / Meta Muse 强风控保号专用）
+const RESIDENTIAL_REGEX = /家宽|住宅|ISP|Residential|4837家宽|芝加哥家宽/i;
 const AI_OPT_REGEX = /GPT|AI|OpenAI|大厂优化|解锁/i;
 
 function main(config, profileName) {
@@ -75,11 +77,15 @@ function main(config, profileName) {
     ? aiPreferredNodes
     : (nonHkNonEuNodes.length > 0 ? nonHkNonEuNodes : (nonHkNodes.length > 0 ? nonHkNodes : validNames));
 
-  // Claude 专属候选：优先美国、日本、新加坡（手动固定选一个最稳节点，避免频繁换 IP 封号）
-  const claudeRegionOrder = ["🇺🇸 美国节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇹🇼 台湾节点", "🇪🇺 欧洲节点"]
-    .filter((r) => availableRegionNames.includes(r));
+  // Claude / Muse 强风控保号组：只列具体单节点（严禁放入 url-test 自动切 IP 组！）
+  // 优先置顶非港「家宽」单节点（默认第一个即为美国/日本家宽），彻底杜绝自动换 IP 封号
+  const residentialNonHk = nonHkNonEuNodes.filter((n) => RESIDENTIAL_REGEX.test(n));
+  const usResidential = residentialNonHk.filter((n) => /🇺🇸|美国|美|US/i.test(n));
+  const otherResidential = residentialNonHk.filter((n) => !/🇺🇸|美国|美|US/i.test(n));
   const claudeProxies = [
-    ...claudeRegionOrder,
+    ...usResidential,
+    ...otherResidential,
+    ...nonHkNonEuNodes,
     ...nonHkNodes,
   ].filter((v, i, arr) => arr.indexOf(v) === i);
 
@@ -119,7 +125,7 @@ function main(config, profileName) {
       proxies: aiGeneralProxies,
     },
     {
-      name: "🧠 Claude 专属",
+      name: "🔒 Claude/Muse 防封家宽",
       type: "select",
       proxies: claudeProxies.length > 0 ? claudeProxies : ["🚀 节点选择"],
     },
@@ -372,8 +378,8 @@ function main(config, profileName) {
     // ③ 个人自定义去广告（同步自圈X reject.list）
     "RULE-SET,custom_reject,🛑 广告拦截",
 
-    // ④ Claude 专属分流（固定稳定非港出口，防 IP 漂移封号）
-    "RULE-SET,custom_ai_claude,🧠 Claude 专属",
+    // ④ Claude / Meta Muse 强风控保号分流（锁定单一非港家宽 IP，严禁自动切 IP）
+    "RULE-SET,custom_ai_claude,🔒 Claude/Muse 防封家宽",
 
     // ⑤ AI 通用分流（自维护最新列表 + MetaCubeX 官方大库兜底，彻底避开香港）
     "RULE-SET,custom_ai_general,🤖 AI 通用",

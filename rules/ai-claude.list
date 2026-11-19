@@ -1,10 +1,12 @@
 # ============================================================
-# Claude / Anthropic 专属分流规则
-# 说明：Anthropic 对 IP 漂移和地区风控极严，强烈建议独立策略组，
-#       固定绑定单一稳定非港节点（推荐 美国 或 日本），不要用延迟自动切换！
+# 强风控 AI 专属分流规则 (Claude / Muse 等防封保号专线)
+# 说明：此类平台对 IP 纯净度与 IP 漂移风控极严，切一次地区/机房 IP 就可能封号！
+#       必须绑定独立手动策略组，并优先锁定单一「家宽」节点（如 美国芝加哥家宽 / 日本家宽），
+#       严禁使用延迟自动切换 (url-test)！
 # 维护：圈X语法，push后 GitHub Actions 自动生成 clash/rules/ai-claude.yaml
 # ============================================================
 
+# ----- Anthropic / Claude -----
 host-suffix, anthropic.com, proxy
 host-suffix, claude.ai, proxy
 host-suffix, claude.com, proxy
@@ -12,3 +14,7 @@ host-suffix, claudeusercontent.com, proxy
 host-suffix, clau.de, proxy
 host, servd-anthropic-website.b-cdn.net, proxy
 host, cdn.usefathom.com, proxy
+
+# ----- Meta Muse / Meta AI -----
+host-suffix, muse.ai, proxy
+host-suffix, meta.ai, proxy

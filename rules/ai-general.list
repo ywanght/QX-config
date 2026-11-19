@@ -93,7 +93,6 @@ host-suffix, pika.art, proxy
 host-suffix, civitai.com, proxy
 host-suffix, dify.ai, proxy
 host-suffix, coze.com, proxy
-host-suffix, meta.ai, proxy
 host-suffix, copilot.microsoft.com, proxy
 host-suffix, bing.com, proxy
 host-suffix, sydney.bing.com, proxy
