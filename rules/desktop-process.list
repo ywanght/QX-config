@@ -1,0 +1,28 @@
+# ============================================================
+# 桌面端专属：按进程强制直连列表 (Desktop Process Direct)
+# 作用：仅供电脑端 Clash Verge Rev / Mihomo 使用（手机圈X忽略此文件）
+#       彻底根治钉钉断连重连、微信发图失败/朋友圈裂图、网盘走代理等痛点
+# 维护：每行写一个进程名（区分大小写，与任务管理器 .exe 一致）
+# ============================================================
+
+# 钉钉
+DingTalk.exe
+dingpan_sync.exe
+DingTalkUpdater.exe
+
+# 微信（新版 4.0 Weixin.exe 与旧版 WeChat.exe + 小程序容器）
+Weixin.exe
+WeChat.exe
+WeChatAppEx.exe
+WeChatPlayer.exe
+WeChatOCR.exe
+
+# 腾讯会议 / 企业微信 / QQ
+WXWork.exe
+wemeetapp.exe
+QQ.exe
+
+# 国内网盘与下载工具
+aDrive.exe
+BaiduNetdisk.exe
+Thunder.exe

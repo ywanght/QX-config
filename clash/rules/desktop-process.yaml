@@ -1,0 +1,17 @@
+# Auto-generated from rules/desktop-process.list
+# DO NOT EDIT MANUALLY — edit rules/desktop-process.list instead.
+payload:
+  - 'PROCESS-NAME,DingTalk.exe'
+  - 'PROCESS-NAME,dingpan_sync.exe'
+  - 'PROCESS-NAME,DingTalkUpdater.exe'
+  - 'PROCESS-NAME,Weixin.exe'
+  - 'PROCESS-NAME,WeChat.exe'
+  - 'PROCESS-NAME,WeChatAppEx.exe'
+  - 'PROCESS-NAME,WeChatPlayer.exe'
+  - 'PROCESS-NAME,WeChatOCR.exe'
+  - 'PROCESS-NAME,WXWork.exe'
+  - 'PROCESS-NAME,wemeetapp.exe'
+  - 'PROCESS-NAME,QQ.exe'
+  - 'PROCESS-NAME,aDrive.exe'
+  - 'PROCESS-NAME,BaiduNetdisk.exe'
+  - 'PROCESS-NAME,Thunder.exe'

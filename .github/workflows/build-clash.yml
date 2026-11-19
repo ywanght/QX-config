@@ -1,0 +1,39 @@
+name: Sync QX Rules to Clash
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'rules/**'
+      - 'scripts/convert_qx_to_clash.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Convert QX rules to Clash YAML
+        run: python scripts/convert_qx_to_clash.py
+
+      - name: Commit and push updated Clash rules
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add clash/rules/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(rules): auto-sync Clash rules from QX rules"
+            git push
+          fi

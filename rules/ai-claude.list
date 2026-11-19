@@ -1,0 +1,14 @@
+# ============================================================
+# Claude / Anthropic 专属分流规则
+# 说明：Anthropic 对 IP 漂移和地区风控极严，强烈建议独立策略组，
+#       固定绑定单一稳定非港节点（推荐 美国 或 日本），不要用延迟自动切换！
+# 维护：圈X语法，push后 GitHub Actions 自动生成 clash/rules/ai-claude.yaml
+# ============================================================
+
+host-suffix, anthropic.com, proxy
+host-suffix, claude.ai, proxy
+host-suffix, claude.com, proxy
+host-suffix, claudeusercontent.com, proxy
+host-suffix, clau.de, proxy
+host, servd-anthropic-website.b-cdn.net, proxy
+host, cdn.usefathom.com, proxy

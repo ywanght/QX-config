@@ -44,13 +44,11 @@ host, h-adashx.ut.taobao.com, reject
 host, ynuf.aliapp.org, reject
 host, yixiu-abtest.alicdn.com, reject
 host, gm.mmstat.com, reject
-host-keyword, alicdn, reject
-domain, *youzanyun.com, reject
+host-suffix, youzanyun.com, reject
 
 # ----- 京东 -----
 host, mktm.jd.com, reject
 host, im-x.jd.com, reject
-host-keyword, 360buyimg, reject
 
 # ----- 哈啰出行 -----
 host, apmgw.hellobike.com, reject
@@ -112,10 +110,10 @@ host, ucc.umeng.com, reject
 host, utoken.umeng.com, reject
 
 # ----- 其他 IP 广告 -----
-host, 203.209.247.65, reject
-host, 106.11.43.138, reject
-host, 59.82.113.252, reject
-host, 49.79.227.133, reject
+ip-cidr, 203.209.247.65/32, reject
+ip-cidr, 106.11.43.138/32, reject
+ip-cidr, 59.82.113.252/32, reject
+ip-cidr, 49.79.227.133/32, reject
 
 # ----- 微软连接测试（防止 Windows 弹窗） -----
 host-suffix, msftconnecttest.com, reject

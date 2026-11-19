@@ -1,9 +1,55 @@
 # ============================================================
 # 自定义直连规则 (Custom Direct Rules)
-# 作用：强制指定域名走直连，不经过代理
-# 优先级：最高（在主配置 filter_remote 中排第二位）
-# 维护：手动添加
+# 作用：强制指定域名/IP走直连，不经过代理（手机圈X + 电脑Clash通用）
+# 优先级：极高
+# 维护：手动添加（圈X语法，push后 GitHub Actions 自动同步生成 Clash 规则）
 # ============================================================
+
+# ----- 微信全系（彻底修复发图失败、朋友圈图片裂开） -----
+host-suffix, qpic.cn, direct
+host-suffix, qlogo.cn, direct
+host-suffix, gtimg.com, direct
+host-suffix, gtimg.cn, direct
+host-suffix, weixin.qq.com, direct
+host-suffix, weixinbridge.com, direct
+host-suffix, servicewechat.com, direct
+host-suffix, wechat.com, direct
+host-suffix, tenpay.com, direct
+
+# ----- 钉钉 & 阿里云办公 -----
+host-suffix, dingtalk.com, direct
+host-suffix, dingtalkapps.com, direct
+host-suffix, aliwork.com, direct
+host-suffix, alicdn.com, direct
+host-suffix, aliyun.com, direct
+host-suffix, aliyuncs.com, direct
+host-suffix, aliyundrive.com, direct
+host-suffix, alipan.com, direct
+
+# ----- 国内 AI 平台直连（防止被泛 AI 规则误伤走代理变慢） -----
+host-suffix, deepseek.com, direct
+host-suffix, moonshot.cn, direct
+host-suffix, kimi.com, direct
+host-suffix, doubao.com, direct
+host-suffix, qwen.ai, direct
+host-suffix, tongyi.aliyun.com, direct
+host-suffix, bigmodel.cn, direct
+host-suffix, chatglm.cn, direct
+host-suffix, zhipuai.cn, direct
+host-suffix, yuanbao.tencent.com, direct
+host-suffix, hunyuan.tencent.com, direct
+host-suffix, baichuan-ai.com, direct
+host-suffix, minimax.chat, direct
+host-suffix, hailuoai.com, direct
+host-suffix, siliconflow.cn, direct
+host-suffix, volces.com, direct
+
+# ----- 股票行情 / 金融数据 -----
+host-suffix, eastmoney.com, direct
+host-suffix, baostock.com, direct
 
 # ----- 运动健身 -----
 host-suffix, strava.com, direct
+
+# ----- 内网 / 私有服务 -----
+ip-cidr, 10.0.0.7/32, direct
