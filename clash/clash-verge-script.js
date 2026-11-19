@@ -18,8 +18,8 @@ const META_GEOIP = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/m
 
 const TEST_URL = "https://www.gstatic.com/generate_204";
 
-// 过滤掉机场信息占位节点（如“剩余流量”、“套餐到期”、“官网”等）
-const INFO_NODE_REGEX = /剩余|流量|到期|过期|套餐|官网|网址|重置|更新|通知|维护|群组|频道|联系|测试|Expire|Traffic|Reset/i;
+// 过滤掉机场信息占位节点（如“剩余流量”、“套餐到期”、“官网”、“教程”、“客户端”等）
+const INFO_NODE_REGEX = /剩余|流量|到期|过期|套餐|官网|网址|重置|更新|通知|维护|群组|频道|联系|测试|教程|客户端|安卓|第三方|舍弃|无法使用|Expire|Traffic|Reset/i;
 
 const REGION_DEFS = [
   { name: "🇭🇰 香港节点", regex: /🇭🇰|香港|港|HK|Hong\s?Kong/i },
