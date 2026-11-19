@@ -379,6 +379,8 @@ function main(config, profileName) {
     "RULE-SET,custom_reject,🛑 广告拦截",
 
     // ④ Claude / Meta Muse 强风控保号分流（锁定单一非港家宽 IP，严禁自动切 IP）
+    "PROCESS-NAME,Muse,🔒 Claude/Muse 防封家宽",
+    "PROCESS-NAME,claude,🔒 Claude/Muse 防封家宽",
     "RULE-SET,custom_ai_claude,🔒 Claude/Muse 防封家宽",
 
     // ⑤ AI 通用分流（自维护最新列表 + MetaCubeX 官方大库兜底，彻底避开香港）

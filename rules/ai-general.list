@@ -44,6 +44,8 @@ host-suffix, labs.google, proxy
 host-suffix, jules.google.com, proxy
 host-suffix, opal.withgoogle.com, proxy
 host-suffix, ai.google.dev, proxy
+host-suffix, accounts.google.com, proxy
+host-suffix, oauth2.googleapis.com, proxy
 
 # ----- Perplexity / Comet -----
 host-suffix, perplexity.ai, proxy

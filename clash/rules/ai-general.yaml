@@ -35,6 +35,8 @@ payload:
   - 'DOMAIN-SUFFIX,jules.google.com'
   - 'DOMAIN-SUFFIX,opal.withgoogle.com'
   - 'DOMAIN-SUFFIX,ai.google.dev'
+  - 'DOMAIN-SUFFIX,accounts.google.com'
+  - 'DOMAIN-SUFFIX,oauth2.googleapis.com'
   - 'DOMAIN-SUFFIX,perplexity.ai'
   - 'DOMAIN-SUFFIX,pplx.ai'
   - 'DOMAIN-SUFFIX,perplexity.com'

@@ -18,3 +18,5 @@ host, cdn.usefathom.com, proxy
 # ----- Meta Muse / Meta AI -----
 host-suffix, muse.ai, proxy
 host-suffix, meta.ai, proxy
+host-suffix, metaaivm.com, proxy
+host-suffix, meta.com, proxy
