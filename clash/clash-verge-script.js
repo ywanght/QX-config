@@ -39,6 +39,12 @@ const RESIDENTIAL_REGEX = /家宽|住宅|ISP|Residential|4837家宽|芝加哥家
 const AI_OPT_REGEX = /GPT|AI|OpenAI|大厂优化|解锁/i;
 
 function main(config, profileName) {
+  // 若当前 Profile 的独立扩展脚本已完成双轨多订阅接管，则直接放行，避免全局脚本覆盖
+  if (config && config["__dual_track_managed__"]) {
+    delete config["__dual_track_managed__"];
+    return config;
+  }
+
   const proxies = Array.isArray(config.proxies) ? config.proxies : [];
   if (proxies.length === 0) {
     return config;
