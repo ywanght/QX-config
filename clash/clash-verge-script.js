@@ -30,8 +30,8 @@ const REGION_DEFS = [
   { name: "🇪🇺 欧洲节点", regex: /🇬🇧|🇩🇪|🇫🇷|🇳🇱|🇸🇪|🇨🇭|英国|德国|法国|荷兰|瑞典|瑞士|欧洲|UK|GB|DE|FR|NL|SE|EU/i },
 ];
 
-// 专门筛选“非香港、非澳门、非中国”的 AI 可用节点
-const NON_HK_EXCLUDE_REGEX = /🇭🇰|🇲🇴|🇨🇳|香港|澳门|中国|回国|HK|MO|CN|Hong\s?Kong|Macau/i;
+// 专门筛选“非香港、非澳门、非台湾（防 Google 送中）、非中国”的 AI 可用节点
+const NON_HK_EXCLUDE_REGEX = /🇭🇰|🇲🇴|🇹🇼|🇨🇳|香港|澳门|台湾|台北|中国|回国|HK|MO|TW|CN|Hong\s?Kong|Macau|Taiwan/i;
 // 优先匹配机场专门标注的 GPT/AI 优化节点（排除欧洲节点，避免 Gemini/Grok 触发欧盟 GDPR 限制）
 const EU_REGEX = /🇬🇧|🇩🇪|🇫🇷|🇳🇱|🇸🇪|🇨🇭|英国|德国|法国|荷兰|瑞典|瑞士|欧洲|UK|GB|DE|FR|NL|SE|EU/i;
 // 优先匹配家宽 / 住宅 IP 节点（Claude / Meta Muse 强风控保号专用）
@@ -95,8 +95,8 @@ function main(config, profileName) {
     ...nonHkNodes,
   ].filter((v, i, arr) => arr.indexOf(v) === i);
 
-  // AI 通用候选：默认走“AI自动优选(非港)”，也可随时切新加坡/日本/美国或具体节点
-  const aiGeneralRegions = ["🇸🇬 新加坡节点", "🇯🇵 日本节点", "🇺🇸 美国节点", "🇹🇼 台湾节点"]
+  // AI 通用候选：默认走“AI自动优选(非港)”，也可随时切新加坡/日本/美国或具体节点（排除台湾防送中）
+  const aiGeneralRegions = ["🇸🇬 新加坡节点", "🇯🇵 日本节点", "🇺🇸 美国节点"]
     .filter((r) => availableRegionNames.includes(r));
   const aiGeneralProxies = [
     "⚡ AI自动优选(非港)",
